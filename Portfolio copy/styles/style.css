@@ -333,10 +333,12 @@ nav {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -402,67 +404,66 @@ nav {
         height: 60px !important;
         margin: auto;
     }
+}
+@media (max-width: 540px) {
+    .containerintro {
+        margin: 10%;
+    }
 
-    @media (max-width: 540px) {
-        .containerintro {
-            margin: 10%;
-        }
+    .containerintro h3 {
+        font-size: 1.2em;
+        font-weight: 800em;
+        padding-bottom: 2%;
+    }
 
-        .containerintro h3 {
-            font-size: 1.2em;
-            font-weight: 800em;
-            padding-bottom: 2%;
-        }
+    .containerintro p {
+        font-size: small;
+        font-weight: lighter;
+    }
 
-        .containerintro p {
-            font-size: small;
-            font-weight: lighter;
-        }
+    .eduitems img {
+        height: 50px;
+        width: auto;
+    }
 
-        .eduitems img {
-            height: 50px;
-            width: auto;
-        }
+    .eduitems p {
+        font-size: 0.8em;
+        font-weight: lighter;
+    }
 
-        .eduitems p {
-            font-size: 0.8em;
-            font-weight: lighter;
-        }
+    .popup .popuptext {
+        font-size: 0.8em;
+    }
 
-        .popup .popuptext {
-            font-size: 0.8em;
-        }
+    .containertechskill {
+        flex-direction: column;
+    }
 
-        .containertechskill {
-            flex-direction: column;
-        }
-
-        .headtext {
-            font-size: 1.2em;
-            font-weight: 800em;
-            margin-left: 10%;
-            margin-top: 10%;
-        }
-        .tech img {
-            width: 45px;
-            height: 35px !important;
-            margin: auto;
-        }
-        table {
-            padding: 4%;
-        }
-        .skills1 {
-            margin-top: 2%;
-            width: 100%;
-        }
-        .skills2 {
-            padding-top: 5%;
-            width: 60%;
-            text-align: center;
-            margin: auto;
-            font-weight: lighter;
-            font-size: 0.8em;
-        }
+    .headtext {
+        font-size: 1.2em;
+        font-weight: 800em;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .tech img {
+        width: 45px;
+        height: 35px !important;
+        margin: auto;
+    }
+    table {
+        padding: 4%;
+    }
+    .skills1 {
+        margin-top: 2%;
+        width: 100%;
+    }
+    .skills2 {
+        padding-top: 5%;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        font-weight: lighter;
+        font-size: 0.8em;
     }
 }
 
