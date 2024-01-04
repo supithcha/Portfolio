@@ -637,27 +637,27 @@ nav {
     font-weight: 800em;
 }
 #Elasticproject {
-    background-image: url("../img/Elasticproject.png");
+    background-image: url("./img/Elasticproject.png");
 }
 
 #OpenMPproject {
-    background-image: url("../img/openmp.jpeg");
+    background-image: url("./img/openmp.jpeg");
 }
 
 #Prototypeproject {
-    background-image: url("../img/prototypese.jpeg");
+    background-image: url("./img/prototypese.jpeg");
 }
 
 #Trainproject {
-    background-image: url("../img/trainproject.png");
+    background-image: url("./img/trainproject.png");
 }
 
 #reversiproject {
-    background-image: url("../img/reversigame.png");
+    background-image: url("./img/reversigame.png");
 }
 
 #cloudproject {
-    background-image: url("../img/Cloud.png");
+    background-image: url("./img/Cloud.png");
 }
 .containercertificate {
     background-color: #EEECDE;
