@@ -612,6 +612,14 @@ nav {
         margin-bottom: 1%;
     }
 }
+#clickactivity1 a{
+    text-decoration-line: none;
+    color: #3498DB;
+}
+#clickactivity2 a{
+    text-decoration-line: none;
+    color: #3498DB;
+}
 .containeractivity .option .label .info {
     display: flex;
     flex-direction: column;
@@ -803,11 +811,6 @@ nav {
             margin-bottom: 5%;
             padding-top: 5%;
         }
-        a {
-            text-decoration-line: none;
-            color: #3498DB;
-            font-weight: lighter;
-        }
         p{
             font-weight: lighter;
             font-size: 0.8em;
@@ -819,6 +822,12 @@ nav {
             color: black;
             font-size: 0.8em;
         }  
+    }
+    #clickactivity1 h3{
+        text-align: center;
+    }
+    #clickactivity2 h3{
+        text-align: center;
     }
     .page-3 h3 {
         margin-left: 5%;
