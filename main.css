@@ -460,6 +460,28 @@ nav {
 .page-3 .containerex .containexyear .ex .eachex {
     margin-bottom: 3%;   
 }
+.page-3 .containerex .containexyear .ex .eachex .introex{
+    color: white;
+    font-weight: lighter;
+}
+.page-3 .containerex .containexyear .ex .eachex .merit{
+    margin-top: 2%;
+    padding-left: 5%;
+}
+.page-3 .containerex .containexyear .ex .eachex .merit li{
+    font-weight: 700em;
+    color: #209a82;
+    text-decoration-style: none;
+}
+.page-3 .containerex .containexyear .ex .eachex .merit p{
+    font-weight: lighter;
+    margin-bottom: 1%;
+}
+.page-3 .containerex .containexyear .ex .eachex .merit .eachsubj{
+    li {
+        color: #16A085;
+    }
+}
 .page-3 .containerex .containexyear .ex .eachex h2 {
     font-size: 1.2em;
     font-weight: bold;
@@ -555,6 +577,40 @@ nav {
     border-radius: 100%;
     background-color: white;
     color: var(--defaultBackground);
+}
+.containeractivity .option .label .icon a{
+    align-items: center;
+    opacity: 0;
+}
+.activity{
+    display: none;
+}
+
+#clickactivity1, #clickactivity2 {
+    background-color: white;
+    color: black;
+    padding: 10%;
+    padding-top: 0px;
+    padding-bottom: 5%;  
+    h3{
+        padding-left: 0px;
+        font-weight: 500em;
+        font-size: 1.2em;
+        margin-bottom: 2%;
+    }
+    a{
+        text-decoration-line: none;
+        color: #3498DB;
+        font-weight: lighter;
+    }
+    h5 {
+        font-weight: lighter;
+        font-size: 1.1em;
+    }
+    p{
+        font-weight: lighter;
+        margin-bottom: 1%;
+    }
 }
 .containeractivity .option .label .info {
     display: flex;
@@ -732,6 +788,38 @@ nav {
         font-size: 0.7em;
         transition-delay: 0.1s;
     }
+    #clickactivity1, #clickactivity2 {
+        padding: 15%;
+        padding-top: 0px;
+        padding-bottom: 10%;  
+    }
+    #clickactivity1, #clickactivity2{
+        h3{
+            font-size: 1em;
+            font-weight: 400em;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            margin-bottom: 5%;
+            padding-top: 5%;
+        }
+        a {
+            text-decoration-line: none;
+            color: #3498DB;
+            font-weight: lighter;
+        }
+        p{
+            font-weight: lighter;
+            font-size: 0.8em;
+            margin-bottom: 3%;
+            color: black;
+        }
+        h5 {
+            font-weight: lighter;
+            color: black;
+            font-size: 0.8em;
+        }  
+    }
     .page-3 h3 {
         margin-left: 5%;
         font-size: 1.2em;
@@ -764,6 +852,18 @@ nav {
     .page-3 .containerex .containexyear .ex .eachex p {
         font-weight: lighter;
         font-size: 0.8em;
+    }
+    .page-3 .containerex .containexyear .ex .eachex .merit{
+        padding-top: 3%;
+        padding-right: 5%;
+    }
+    .page-3 .containerex .containexyear .ex .eachex .merit li{
+        list-style-type: none ;
+        font-size: 0.8em;
+    }
+    .page-3 .containerex .containexyear .ex .eachex .merit p{
+        font-weight: lighter;
+        margin-bottom: 2%;
     }
     .page-3 .containercertificate h3 {
         font-size: 1.2em;
@@ -907,6 +1007,7 @@ footer .foottext {
 footer .fa {
     color: white;
     padding: 5px;
+    padding-right: 2px;
     font-size: 30px;
     width: 50px;
     text-align: center;
