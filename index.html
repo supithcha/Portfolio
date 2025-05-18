@@ -23,14 +23,14 @@
       <li><a href="#page-1" class="hyper">Home</a></li>
       <li><a href="#page-2" class="hyper">About</a></li>
       <li><a href="#page-3" class="hyper">Experience</a></li>
-      <li><a href="#page-4" class="hyper">Contact</a></li>
+      <li><a href="#page-4" class="hyper">GET IN TOUCH</a></li>
     </ul>
-    <div class="menu dropdown" onclick="myFunction(this)">
+    <div class="menu dropdown" onclick="toggleDropdown()">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
 
-      <div class="dropdown-content">
+      <div class="dropdown-content" id="dropdown">
         <a href="#page-1">Home</a>
         <a href="#page-2">About</a>
         <a href="#page-3">Experience</a>
@@ -38,24 +38,41 @@
       </div>
     </div>
   </nav>
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("show");
+    }
+  
+    // Close dropdown when clicking outside
+    window.onclick = function (event) {
+      if (!event.target.closest('.menu')) {
+        const dropdown = document.getElementById("dropdown");
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+  
 
   <!-- page1 home -->
   <div class="page-1" id="page-1">
 
     <div class="content">
-      <img src="./img/profile-img.png" alt="profile" />
+      <img src="./img/profile/profile-2024.png" alt="profile image" />
       <div class="console-container">
         <span id="text"></span>
         <div class="console-underscore" id="console">&#95;</div>
       </div>
       <div>
         <h2 class="name">Supithcha Jongphoemwatthanaphon</h2>
-        <p class="updated">Last updated: 1 January 2024</p>
+        <p class="updated">Last updated: 20 May 2025</p>
       </div>
     </div>
 
     <script>
-      consoleText(["Welcome to", "Pub's Portfolio"], 'text', ['#E74C3C ', '#F4D03F', '#58D68D']);
+      consoleText(["Welcome to", "Pub's Portfolio"], 'text', ['#F4D03F ', '#789DBC', '#A9D4CC']);
       function consoleText(words, id, colors) {
         if (colors === undefined) colors = ['#fff'];
         var visible = true;
@@ -65,6 +82,7 @@
         var waiting = false;
         var target = document.getElementById(id)
         target.setAttribute('style', 'color:' + colors[0])
+        con.setAttribute('style', 'color:' + colors[0])
         window.setInterval(function () {
 
           if (letterCount === 0 && waiting === false) {
@@ -77,6 +95,7 @@
               words.push(usedWord);
               x = 1;
               target.setAttribute('style', 'color:' + colors[0])
+              con.setAttribute('style', 'color:' + colors[0])
               letterCount += x;
               waiting = false;
             }, 1000)
@@ -99,7 +118,6 @@
 
           } else {
             con.className = 'console-underscore'
-
             visible = true;
           }
         }, 400)
@@ -113,7 +131,7 @@
     <div class="containerintro">
       <h3>GET TO KNOW ME</h3>
       <p data-aos="fade-up">
-        A current third-year ICT student with a strong sense of responsibility, exceptional communication and
+        <strong>A senior software engineering ICT student</strong> with a strong sense of responsibility, exceptional communication and
         collaboration skills, and adept time management abilities. Possesses knowledge and skills in programming, and is
         enthusiastically open to learning new concepts.
       </p> <br>
@@ -130,14 +148,14 @@
         <a href="http://kus.kps.ku.ac.th/2019/assets/img/hero-img.png">
           <img src="./img/kusk.png" alt="Link to KU" />
         </a>
-        <p> High School Diploma <br> 2017 - 2021</p>
+        <p> High School Diploma <br> 2017 - 2021 | 3.79/4.00</p>
         <span class="popuptext" id="myPopup1">KUSK 32<br> Kasetsart University Laboratory School</span>
       </div>
       <div class="eduitems popup" onclick="myPopedu2()">
         <a href="https://www.ict.mahidol.ac.th/">
           <img src="https://academic.ict.mahidol.ac.th/student/st002/img/ictlogo.png" alt="Link to Mahidol ICT" />
         </a>
-        <p> Bachelor of Science <br> 2021-2025 </p>
+        <p> Software Engineering Major <br> 2021-2025 | 3.81/4.00</p>
         <span class="popuptext" id="myPopup2">MUICT 19<br> Faculty of ICT, Mahidol University</span>
       </div>
 
@@ -165,80 +183,51 @@
           <table>
             <tr>
               <td class="tech">
-                <a href="#program">
+                <a href="#language">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
                     class="img-fluid" alt="C" />
                 </a>
               </td>
               <td class="tech">
-                <a href="#program">
+                <a href="#language">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"
+                    class="img-fluid" alt="C#" />
+                </a>
+              </td>
+ 
+              <td class="tech">
+                <a href="#language">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
                     class="img-fluid" alt="Python" />
                 </a>
-              </td>
+              </td>       
               <td class="tech">
-                <a href="#program">
-                  <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" class="img-fluid" alt="Java" />
-                </a>
-              </td>
-              <td class="tech">
-                <a href="#program">
+                <a href="#language">
                   <img src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png" class="img-fluid"
                     alt="HTML" />
                 </a>
               </td>
               <td class="tech">
-                <a href="#program">
+                <a href="#language">
                   <img src="https://diziglobalsolution.com/wp-content/uploads/2023/04/logo-css-3-1536.png"
                     class="img-fluid" alt="CSS" />
                 </a>
               </td>
               <td class="tech">
-                <a href="#program">
+                <a href="#language">
                   <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
                     class="img-fluid" alt="JavaScript" />
                 </a>
               </td>
               <td class="tech">
-                <a href="#program">
-                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1901x2048-mk1e13df.png"
-                    class="img-fluid" alt="Nodejs" />
+                <a href="#language">
+                  <img src="https://cdn-icons-png.flaticon.com/512/919/919832.png"
+                    class="img-fluid" alt="Typescript" />
                 </a>
               </td>
               <td class="tech">
-                <a href="#program">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" class="img-fluid"
-                    alt="React" />
-                </a>
-
-              </td>
-              <td class="tech">
-                <a href="#program">
-                  <img src="https://www.svgrepo.com/show/349342/docker.svg" class="img-fluid" alt="Docker" />
-                </a>
-
-              </td>
-              <td class="tech">
-                <a href="#program">
-                  <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" class="img-fluid" alt="MySQL" />
-                </a>
-              </td>
-              <td class="tech">
-                <a href="#program">
-                  <img src="https://www.tutorialsteacher.com/Content/images/home/mongodb.svg" class="img-fluid"
-                    alt="MongoDB" />
-                </a>
-              </td>
-              <td class="tech">
-                <a href="#program">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" class="img-fluid"
-                    alt="Matlab" />
-                </a>
-              </td>
-              <td class="tech">
-                <a href="#program">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                    class="img-fluid" alt="AWS" />
+                <a href="#language">
+                  <img src="https://www.svgrepo.com/show/354113/nextjs-icon.svg" class="img-fluid" alt="Next.js" />
                 </a>
               </td>
               <td class="tech">
@@ -247,17 +236,95 @@
                     alt="Bootstrap" />
                 </a>
               </td>
+
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1901x2048-mk1e13df.png"
+                    class="img-fluid" alt="Nodejs" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" class="img-fluid"
+                    alt="React" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://static-00.iconduck.com/assets.00/redux-icon-2048x1945-ahvhunxp.png" class="img-fluid"
+                    alt="Redux" />
+                </a>
+              </td>
+
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://avatars.githubusercontent.com/u/18133?s=280&v=4"
+                    class="img-fluid" alt="Git" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://www.svgrepo.com/show/349342/docker.svg" 
+                  class="img-fluid" alt="Docker" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" 
+                  class="img-fluid" alt="MySQL" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://static-00.iconduck.com/assets.00/database-hadoop-icon-1024x795-97v8g4ox.png" 
+                  class="img-fluid" alt="Hadoop" />
+                </a>
+              </td>
+              
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://static-00.iconduck.com/assets.00/flutter-icon-1651x2048-ojswpayr.png" 
+                  class="img-fluid"
+                    alt="Flutter" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://static-00.iconduck.com/assets.00/unity-icon-256x256-mbdg84s3.png" 
+                  class="img-fluid"
+                    alt="Unity" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://img.icons8.com/color/600/elasticsearch.png" c
+                  lass="img-fluid"
+                    alt="Elasticsearch" />
+                </a>
+              </td>
+              <td class="tech">
+                <a href="#program">
+                  <img src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png" class="img-fluid"
+                    alt="Firebase" />
+                </a>
+              </td>
+              
+              
             </tr>
           </table>
         </div>
 
         <div class="skills2" data-aos="fade-up">
-          <li>Time management</li>
-          <li>Collaboration</li>
-          <li>Communication</li>
-          <li>Adaptability</li>
-          <li>Decision Making</li>
-          <li>Leadership</li>
+          <ul style="list-style: none;">
+            <li>Time management</li>
+            <li>Collaboration</li>
+            <li>Communication</li>
+            <li>Problem-Solving</li>
+            <li>Adaptability</li>
+            <li>Decision Making</li>
+            <li>Attention to Detail</li>
+            <li>Leadership</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -268,6 +335,95 @@
     <h3>EXPERIENCE</h3>
 
     <div class="containerex">
+      <div class="containexyear" data-aos="fade-up">
+        <div class="year">
+          <h2 data-aos="fade-up">2025</h2>
+        </div>
+        <div class="ex">
+          <div class="eachex">
+            <h2>Software Engineer Intern - Backend</h2>
+            <p><a href="https://www.agoda.com/?cid=1844104">Agoda</a>, Bangkok</p><br>
+            <p>
+              Collaborated with the <strong class="yellow">Payment Security team</strong> to resolve performance-related 
+              issues within <strong>an Agile/Scrum</strong> environment. Worked on de-integrating experiments and developed 
+              scripts to streamline the local development setup. Built internal debugging tools using Redux 
+              and TypeScript (TSX) to support faster issue diagnosis and resolution. Gained hands-on 
+              experience in backend development using Node.js and C#, RESTful API design, SQL and 
+              Hadoop-based data workflows, as well as working with Git and CI/CD pipelines.
+            </p>
+          </div>
+            <div class="eachex">
+              <h2>Developer – MU MyMind</h2>
+              <p><a href="https://www.agoda.com/?cid=1844104">Mental Health Web Application</a>, Thailand</p><br>
+              <p>
+                Contributed as one of the core developers of <strong class="yellow">MU MyMind</strong>, a mental health support platform designed for adolescents. The system includes features such as appointment scheduling, mood tracking, personalized mental health programs, and real-time notifications via LINE and email. Additionally, it provides an admin dashboard for effective user and system management.
+              </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="containexyear" data-aos="fade-up">
+        <div class="year">
+          <h2 data-aos="fade-up">2024</h2>
+        </div>
+        <div class="ex">
+          <div class="eachex">
+            <h2>Research Intern</h2>
+            <p><a href="https://www.jaist.ac.jp/index.html">Japan Advanced Institute of Science and Technology (JAIST)</a>, Japan</p><br>
+            <p>
+              Contributed to research on scenario-based safety testing for Automated Driving Systems (ADS). Set up a specification-based testing environment and defined test scenarios based on JAMA standards to evaluate system behavior under diverse conditions. Co-authored an IEEE conference paper titled 
+              <a href="https://ieeexplore.ieee.org/document/10859054" >
+                <em class="yellow">Bridging Gaps between Scenario-Based Safety Analysis and Simulation-based Testing for Autonomous Driving Systems</em>
+              </a> (IEEE VTC-Fall 2024), presenting methods to enhance safety validation through simulation. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="containexyear" data-aos="fade-up">
+        <div class="year">
+          <h2 data-aos="fade-up">2023</h2>
+        </div>
+        <div class="ex">
+          <div class="eachex">
+            <h2>Teacher Assistant for Web Programming course</h2>
+            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>, Mahidol University</p><br>
+            <p>
+              Advised students who sought assistance with their lab assignments and provided guidance on the Web Programming course. 
+              Addressed students' inquiries related to both lab assignments and the Web Programming curriculum, reinforcing my proficiency 
+              in HTML, CSS, React.js, and Node.js.</p>
+          </div>
+          <div class="eachex">
+            <h2>The tutor for Technical English I</h2>
+            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>, Mahidol University</p><br>
+            <p>
+              As a tutor for Technical English I, I assisted students in mastering English language skills tailored to technical contexts. 
+              This included teaching technical vocabulary, grammar, and writing conventions. I provided personalized guidance to help 
+              students improve their English proficiency, preparing them for success in ICT-related fields. This experience enhanced my 
+              skills in language instruction and deepened my understanding of effective communication in technical domains.</p>
+          </div>
+          <div class="eachex">
+            <h2>Social Media Marketing Intern</h2>
+            <p><a
+                href="https://www.google.com/search?q=salaya+market&oq=salaya+mark&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIJCAIQABgKGIAEMgkIAxAAGAoYgAQyCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB6oAgCwAgA&sourceid=chrome&ie=UTF-8#ip=1">
+                Salaya Market</a>, Nakhon Pathom, Thailand</p><br>
+            <p>I was responsible for creating and curating compelling content across multiple social media platforms such as TikTok, 
+              Instagram, and Facebook. Working closely with the marketing team, I ensured that our social media strategies were aligned 
+              with the company's broader marketing objectives. Additionally, I contributed to the planning and execution of impactful social
+               media campaigns and promotions. This role allowed me to hone my skills in content creation and strategic marketing while 
+               gaining valuable hands-on experience in the dynamic field of social media marketing.</p>
+          </div>
+          <div class="eachex">
+            <h2>Math and English Tutor</h2>
+            <p><a href="https://brightuptutor.com">BRIGHT UP CENTER BY P'Jeng</a>, Nakhon Pathom, Thailand</p><br>
+            <p>I provided comprehensive tutoring services in both subjects. My responsibilities included developing tailored learning plans 
+              to meet individual student needs, conducting engaging and effective tutoring sessions, and tracking student progress. 
+              Additionally, I leveraged my expertise to create educational materials and resources that enhanced the learning experience 
+              for my students. </p>
+          </div>
+        </div>
+      </div>
+
       <div class="containexyear">
         <div class="year">
           <h2 data-aos="fade-up">2022</h2>
@@ -276,8 +432,7 @@
         <div class="ex" data-aos="fade-up">
           <div class="eachex">
             <h2>The tutor for several subjects</h2>
-            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>
-              , Mahidol University</p><br>
+            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>, Mahidol University</p><br>
             
               <p class="introex">As a meritorious scholarship student during the 2021 academic year, I had the privilege of serving as a tutor in several courses, 
               where I contributed to the learning experiences of my peers. My roles included:
@@ -315,8 +470,7 @@
           </div>
           <div class="eachex">
             <h2>MUICT Welcome Freshman 2022 Staff</h2>
-            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>
-              , Mahidol University</p><br>
+            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>, Mahidol University</p><br>
             <p>Be responsible for ensuring a successful event by overseeing various activities for the welcome freshman
               of ICT. Moreover, as a Master of Ceremonies (MC), I welcomed new students and guided them into the code line, 
               enhancing my leadership and event management skills.
@@ -324,62 +478,38 @@
           </div>
         </div>
       </div>
-
-      <div class="containexyear" data-aos="fade-up">
-        <div class="year">
-          <h2 data-aos="fade-up">2023</h2>
-        </div>
-        <div class="ex">
-          <div class="eachex">
-            <h2>Teacher Assistant for Web Programming course</h2>
-            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>
-              , Mahidol University</p><br>
-            <p>
-              Advised students who sought assistance with their lab assignments and provided guidance on the Web Programming course. 
-              Addressed students' inquiries related to both lab assignments and the Web Programming curriculum, reinforcing my proficiency 
-              in HTML, CSS, React.js, and Node.js.</p>
-          </div>
-          <div class="eachex">
-            <h2>The tutor for Technical English I</h2>
-            <p><a href="https://www.ict.mahidol.ac.th/">Faculty of Information and Communication Technology (ICT)</a>
-              , Mahidol University</p><br>
-            <p>
-              As a tutor for Technical English I, I assisted students in mastering English language skills tailored to technical contexts. 
-              This included teaching technical vocabulary, grammar, and writing conventions. I provided personalized guidance to help 
-              students improve their English proficiency, preparing them for success in ICT-related fields. This experience enhanced my 
-              skills in language instruction and deepened my understanding of effective communication in technical domains.</p>
-          </div>
-          <div class="eachex">
-            <h2>Social Media Marketing Intern</h2>
-            <p><a
-                href="https://www.google.com/search?q=salaya+market&oq=salaya+mark&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIJCAIQABgKGIAEMgkIAxAAGAoYgAQyCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB6oAgCwAgA&sourceid=chrome&ie=UTF-8#ip=1">
-                Salaya Market</a>
-              , Nakhon Pathom, Thailand</p><br>
-            <p>I was responsible for creating and curating compelling content across multiple social media platforms such as TikTok, 
-              Instagram, and Facebook. Working closely with the marketing team, I ensured that our social media strategies were aligned 
-              with the company's broader marketing objectives. Additionally, I contributed to the planning and execution of impactful social
-               media campaigns and promotions. This role allowed me to hone my skills in content creation and strategic marketing while 
-               gaining valuable hands-on experience in the dynamic field of social media marketing.</p>
-          </div>
-          <div class="eachex">
-            <h2>Math and English Tutor</h2>
-            <p><a href="https://brightuptutor.com">BRIGHT UP CENTER BY P'Jeng</a>
-              , Nakhon Pathom, Thailand</p><br>
-            <p>I provided comprehensive tutoring services in both subjects. My responsibilities included developing tailored learning plans 
-              to meet individual student needs, conducting engaging and effective tutoring sessions, and tracking student progress. 
-              Additionally, I leveraged my expertise to create educational materials and resources that enhanced the learning experience 
-              for my students. </p>
-          </div>
-        </div>
-      </div>
     </div>
 
 
     <div class="containeractivity">
-      <h3 > ACTIVITY </h3>
-      
+      <h3> AWARDS </h3>
+      <div class="awardContainer">
 
-      <div class="parentactivity" data-aos="fade-up">
+          <div class="awardList">
+            <h4>One-Year Partial Scholarship</h4>
+            <p class="description">
+              Recipient of a merit-based scholarship (2022, 2024) awarded for academic excellence, exemplary behavior, and participation in peer tutoring programs, including providing over 15 hours of tutoring support per semester
+            </p>
+          </div>
+          <div class="awardList">
+            <h4>Hackathon: Mu My Mind App Challenge</h4>
+            <p class="description">
+              At the MU My Mind App Challenge Hackathon, my team and I participated in developing an application aimed at reducing the suicide 
+              rate in patients with depression. Through innovative thinking and collaboration, we presented a Figma prototype that showcased our 
+              creative solution. Our efforts were rewarded when we emerged as champions of the competition. This experience not only demonstrated 
+              my ability to work effectively in a team but also highlighted my skills in problem-solving, innovation, and presentation. 
+              For more information about the activity, you can visit  <a href="https://www.ict.mahidol.ac.th/thai/int-hackathon/"> https://www.ict.mahidol.ac.th/thai/int-hackathon/ </a>
+            </p>
+          </div>
+
+      </div>
+
+      <h3>  </h3>
+      <!-- <h3> ACTIVITY </h3> -->
+
+      <section class="activity-container">
+      </section>
+      <!-- <div class="parentactivity" data-aos="fade-up">
         <div class="options">
           <div class="option active" style="--optionBackground: url('./img/volenteer1.jpeg');">
             <div class="shadow"></div>
@@ -443,8 +573,10 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
+
     </div>
+
     <script>
       document.querySelectorAll('.option').forEach(function (option) {
         option.addEventListener('click', function () {
@@ -508,8 +640,8 @@
           <a href="https://github.com/supithcha/Elasticsearch_NarutoCharactors">
             <div class="box" id="Elasticproject">
               <div class="box-content">
-                <h2>Elasticsearch for Naruto Charactors</h2>
-                <p>Elastic | Kibana</p>
+                <h2>Search System Project</h2>
+                <p>Elasticsearch | Kibana</p>
               </div>
             </div>
           </a>
@@ -518,8 +650,8 @@
           <a href="https://github.com/supithcha/Train_Website">
             <div class="box" id="Trainproject">
               <div class="box-content">
-                <h2>Web for Train Website</h2>
-                <p>Frontend | Backend</p>
+                <h2>Thai Railways Booking System</h2>
+                <p>Full stack development</p>
               </div>
             </div>
           </a>
@@ -538,7 +670,7 @@
           <a href="https://github.com/supithcha/Prototype_DepositandSearch">
             <div class="box" id="Prototypeproject">
               <div class="box-content">
-                <h2>Unit test for Deposit&Search</h2>
+                <h2>Unit test for Deposit & Search</h2>
                 <p>Software Engineering | Web App</p>
               </div>
             </div>
@@ -626,7 +758,7 @@
       <div class="parentcontact">
         <div class="contacts">
           <h3>EMAIL</h3>
-          <p> <a href="mailto:someone@supithcha.jon@student.mahidol.ac.th">supithcha.jon@student.mahidol.ac.th</a></p>
+          <p> <a href="mailto:someone@supithcha.jon@gmail.com">supithcha.jon@gmail.com</a></p>
         </div>
         <div class="contacts">
           <h3>PHONE</h3>
@@ -645,7 +777,7 @@
   <!-- Footer -->
   <footer>
     <div class="foottext">
-      @ COPYRIGHT 2024
+      @ COPYRIGHT 2025
     </div>
     <div class="icon">
       <a href="https://www.linkedin.com/in/supithcha/" class="fa fa-linkedin"></a>
