@@ -979,7 +979,7 @@ nav {
   }
 }
 
-.containerDesign{
+.containerDesign {
   background-color: #fff;
 }
 
@@ -995,15 +995,15 @@ nav {
   position: relative;
 }
 
-.design-img{
+.design-img {
   /* height: 500px; */
   width: 100%;
   border-radius: 35px;
 }
 
 @media (max-width: 540px) {
-  .design-img{
-  border-radius: 20px;
+  .design-img {
+    border-radius: 20px;
   }
 }
 
@@ -1025,7 +1025,7 @@ nav {
   margin-top: -50px;
   color: black;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   border-radius: 0 35px 35px 0;
   user-select: none;
   -webkit-user-select: none;
@@ -1057,13 +1057,14 @@ nav {
   padding: 1% 4%;
   color: white;
   border-radius: 35px 35px 0 0;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 @media (max-width: 540px) {
   .caption-container {
-  border-radius: 20px 20px 0 0;
-}
+    border-radius: 20px 20px 0 0;
+    font-size: 0.85em;
+  }
 }
 
 .row:after {
@@ -1089,79 +1090,79 @@ nav {
 }
 
 /* Page 4 Contact */
-.page-4 {
+.page-5 {
   background-color: black;
   color: white;
 }
-.page-4 .containercontact {
+.page-5 .containercontact {
   background-color: black;
   padding: 10%;
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.page-4 .containercontact .contacttext {
+.page-5 .containercontact .contacttext {
   margin-bottom: 3%;
 }
-.page-4 .containercontact .contacttext h3 {
+.page-5 .containercontact .contacttext h3 {
   font-weight: 700em;
   font-size: 1.5em;
 }
-.page-4 .containercontact .contacttext h4 {
+.page-5 .containercontact .contacttext h4 {
   font-weight: 700em;
   font-size: 1.5em;
 }
-.page-4 .containercontact .parentcontact {
+.page-5 .containercontact .parentcontact {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-right: 5%;
 }
-.page-4 .containercontact .parentcontact .contacts h3 {
+.page-5 .containercontact .parentcontact .contacts h3 {
   font-weight: 500em;
   font-size: 1.3em;
 }
-.page-4 .containercontact .parentcontact .contacts a {
+.page-5 .containercontact .parentcontact .contacts a {
   text-decoration-line: none;
   color: white;
   font-size: 1.2em;
 }
-.page-4 .containercontact .parentcontact .contacts a:hover {
+.page-5 .containercontact .parentcontact .contacts a:hover {
   color: #3498db;
 }
 
 @media (max-width: 540px) {
-  .page-4 .containercontact {
+  .page-5 .containercontact {
     padding: 15%;
     padding-bottom: 5%;
     padding-top: 10%;
   }
-  .page-4 .containercontact .contacttext {
+  .page-5 .containercontact .contacttext {
     margin-bottom: 5%;
   }
-  .page-4 .containercontact .contacttext h3 {
+  .page-5 .containercontact .contacttext h3 {
     font-size: 1.2em;
     font-weight: 800em;
   }
-  .page-4 .containercontact .contacttext h4 {
+  .page-5 .containercontact .contacttext h4 {
     font-size: 1.2em;
     font-weight: 800em;
   }
-  .page-4 .containercontact .parentcontact {
+  .page-5 .containercontact .parentcontact {
     flex-direction: column;
     padding-right: 0px;
   }
-  .page-4 .containercontact .parentcontact .contacts {
+  .page-5 .containercontact .parentcontact .contacts {
     padding-bottom: 4%;
   }
-  .page-4 .containercontact .parentcontact .contacts h3 {
+  .page-5 .containercontact .parentcontact .contacts h3 {
     font-size: 1em;
     font-weight: 400em;
   }
-  .page-4 .containercontact .parentcontact .contacts a {
+  .page-5 .containercontact .parentcontact .contacts a {
     font-weight: lighter;
     font-size: 1em;
   }
-  .page-4 .containercontact .parentcontact .contacts a:hover {
+  .page-5 .containercontact .parentcontact .contacts a:hover {
     color: #3498db;
   }
 }
