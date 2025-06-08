@@ -731,7 +731,7 @@ nav {
   color: white;
 }
 .containerproject .box-content h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800em;
 }
 #Elasticproject {
@@ -816,6 +816,11 @@ nav {
   }
   .awardList h4 {
     margin-bottom: 3%;
+    font-size: small;
+  }
+
+  .awardList .description {
+    font-size: smaller;
   }
   .containeractivity h3 {
     font-size: 1.2em;
