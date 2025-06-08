@@ -329,7 +329,6 @@ nav {
   width: 65%;
 }
 .page-2 .skills2 {
-  
   font-weight: lighter;
   font-size: 1em;
 }
@@ -534,8 +533,6 @@ nav {
   padding-left: 10%;
   padding-top: 5%;
 }
-
-
 
 .parentactivity {
   display: flex;
@@ -753,6 +750,18 @@ nav {
   background-image: url("./img/project-preview/trainproject.png");
 }
 
+#BashCoffee {
+  background-image: url("./img/project-preview/BashCoffee.png");
+}
+
+#Keystrokeproject {
+  background-image: url("./img/project-preview/KeystrokeAuth.png");
+}
+
+#HappyTails {
+  background-image: url("./img/project-preview/HappyTails.png");
+}
+
 #reversiproject {
   background-image: url("./img/project-preview/reversigame.png");
 }
@@ -802,10 +811,10 @@ nav {
   .awardContainer {
     width: 70%;
   }
-  .awardList{
+  .awardList {
     margin-top: 10%;
   }
-  .awardList h4{
+  .awardList h4 {
     margin-bottom: 3%;
   }
   .containeractivity h3 {
